@@ -1,0 +1,73 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h3>Aggiungi Utente</h3>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Nome</label>
+            <input
+              type="text"
+              formControlName="nome"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.nome.errors }"
+            />
+            <div *ngIf="submitted && f.nome.errors" class="invalid-feedback">
+              <div *ngIf="f.nome.errors.required">E' richiesto un nome</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Cognome</label>
+            <input
+              type="text"
+              formControlName="cognome"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.cognome.errors }"
+            />
+            <div *ngIf="submitted && f.cognome.errors" class="invalid-feedback">
+              <div *ngIf="f.cognome.errors.required">
+                E' richiesto un cognome
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="text"
+              formControlName="email"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+            />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required">E' richiesta una email</div>
+              <div *ngIf="f.email.errors.email">L'email deve essere valida</div>
+              <div *ngIf="f.email.errors.duplicateEmail">
+                L'email già esiste
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Data di nascita</label>
+            <input
+              type="date"
+              formControlName="date"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.date.errors }"
+            />
+            <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+              <div *ngIf="f.date.errors.required">
+                E' richiesta la data di nascita
+              </div>
+              <div *ngIf="f.date.errors.maggiorenne">
+                l'utente deve essere maggiorenne
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Salva</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

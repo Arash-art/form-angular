@@ -1,0 +1,40 @@
+{
+  "utente1": [
+    {
+      "nome": "string",
+      "cognome": "string",
+      "Mail": "string",
+      "DataNascita": "string"
+    }
+  ],
+
+  "utente2": [
+    {
+      "id": "Json2",
+      "nome": "string",
+      "cognome": "string",
+      "Mail": "string",
+      "DataNascita": "number"
+    }
+  ],
+
+  "utente3": [
+    {
+      "id": "Json3",
+      "nome": "string",
+      "cognome": "string",
+      "Mail": "string",
+      "DataNascita": "number"
+    }
+  ],
+
+  "utente4": [
+    {
+      "id": "Json4",
+      "nome": "string",
+      "cognome": "string",
+      "Mail": "string",
+      "DataNascita": "number"
+    }
+  ]
+}
